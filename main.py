@@ -1,5 +1,15 @@
 from crewai import Agent, Task, Process, Crew
 import os
+
+
+## For Human Input after set up the Ollama local in your system..
+# from langchain_community.llms import Ollama
+# llm = Ollama(model="llama3",temperature=0.0)
+# math_llm = Ollama(model="llama3",temperature=0.0)
+# tools_1 = load_tools(
+#     ["human", "llm-math"],
+#     llm=math_llm,
+# )
 # This is for groq
 os.environ["OPENAI_API_BASE"] = 'https://api.groq.com/openai/v1'
 os.environ["OPENAI_MODEL_NAME"] = 'llama3-70b-8192'  
@@ -18,7 +28,8 @@ places_agent = Agent(
     goal=f"accurately retrieve the tourist places from {place} and its history that people can visit and have a good time which are famous",
     backstory=f"You are an AI assistant whose only job is to retrieve the tourist places from {place} and that places should be famous and people should be able to visit that places and its history",
     verbose=True,
-    allow_delegation=False
+    allow_delegation=False,
+    # tools=tools_1
 )
 
 planner_agent = Agent(
