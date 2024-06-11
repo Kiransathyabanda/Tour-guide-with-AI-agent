@@ -1,8 +1,12 @@
 from crewai import Agent, Task, Process, Crew
 import os
-
+# This is for groq
 os.environ["OPENAI_API_BASE"] = 'https://api.groq.com/openai/v1'
 os.environ["OPENAI_MODEL_NAME"] = 'llama3-70b-8192'  
+os.environ["OPENAI_API_KEY"] = 'your-api-key'
+
+# For OpenAI Key
+os.environ['OPENAI_MODEL_NAME'] = 'gpt-3.5-turbo' 
 os.environ["OPENAI_API_KEY"] = 'your-api-key'
 
 project = "Tour guide"
