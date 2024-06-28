@@ -11,8 +11,8 @@ This project is an AI-powered tour guide application using CrewAI that helps ide
 
 1. **Clone the repository**:
     ```sh
-    git clone https://github.com/yourusername/tour-guide-ai.git
-    cd tour-guide-ai
+    git clone https://github.com/kiransathyabanda/Tour-guide-with-AI-agent.git
+    cd Tour-guide-with-AI-agent
     ```
 
 2. **Create and activate a virtual environment** (optional but recommended):
